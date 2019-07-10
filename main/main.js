@@ -80,7 +80,7 @@ function calculatePromotions(receiptItems){
 }
 
 function createReceipt(receiptItems,spare){
-    
+
     let receipt = `***<没钱赚商店>收据***\n`;
     let total = 0;
     receiptItems.forEach(item=>{
@@ -90,6 +90,6 @@ function createReceipt(receiptItems,spare){
     receipt += `----------------------\n`;
     receipt += `总计：${total.toFixed(2)}(元)\n`;
     receipt += `节省：${spare.toFixed(2)}(元)\n`;
-    receipt += `----------------------`;
+    receipt += `**********************`;
     return receipt;
 }
