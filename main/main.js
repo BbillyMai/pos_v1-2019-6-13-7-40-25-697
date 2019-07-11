@@ -68,7 +68,7 @@ function calculatePromotions(receiptItems) {
     receiptItems.forEach(item => {
         promotions[0].barcodes.forEach(barcode => {
             if (barcode == item.barcode) {
-                if (item.count >= 2) {
+                if (item.count >= 3) {
                     let times = parseInt(item.count / 3);
                     item.subTotal -= item.price * times;
                     spare += item.price * times;
